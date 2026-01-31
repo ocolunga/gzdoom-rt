@@ -891,11 +891,6 @@ int FIWadManager::IdentifyVersion (std::vector<std::string>&wadfiles, const char
 		}
 		else if( autoname.CompareNoCase( "doom.id.doom1.ultimate" ) == 0 )
 		{
-			// TODO: remove when doom 1 is implemented
-			l_showWarn( "Doom (1993) is not supported.\n"
-			            "Only Doom II (1994) has the required light data for ray tracing.\n\n"
-			            "Expect INCORRECT LIGHTING." );
-
 			if( fileSize != 12408292 )
 			{
 				l_showWarn( "Please, use the original DOOM.wad file from Steam:\n    "

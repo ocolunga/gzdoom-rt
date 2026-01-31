@@ -4649,17 +4649,14 @@ extern bool rt_isdoom2;
 
 static void RT_InjectTitleIntoDoomMap( const char* mapname )
 {
-    if( !rt_isdoom2 )
-    {
-        return;
-    }
-    
     if( !mapname || mapname[ 0 ] == '\0' )
     {
         return;
     }
 
     const char* titlename = nullptr;
+
+    if( rt_isdoom2 )
     {
         if( stricmp( mapname, "map12" ) == 0 )
         {
@@ -4668,6 +4665,21 @@ static void RT_InjectTitleIntoDoomMap( const char* mapname )
         else if( stricmp( mapname, "map21" ) == 0 )
         {
             titlename = "title/ep3";
+        }
+    }
+    else
+    {
+        if( stricmp( mapname, "E2M1" ) == 0 )
+        {
+            titlename = "title/d1ep2";
+        }
+        else if( stricmp( mapname, "E3M1" ) == 0 )
+        {
+            titlename = "title/d1ep3";
+        }
+        else if( stricmp( mapname, "E4M1" ) == 0 )
+        {
+            titlename = "title/d1ep4";
         }
     }
 

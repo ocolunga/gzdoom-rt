@@ -1495,8 +1495,7 @@ extern bool RT_AskToOpenUrl( const char* heading, const char* msg, const wchar_t
 
 extern std::atomic< HWND > g_msgbox_parent;
 
-// TODO: set to 1, when Doom 1 is done
-#define DOOM1_RT_OK 0
+#define DOOM1_RT_OK 1
 
 static void AskUserToChoose(std::stop_token stopToken, std::promise<ChooseResult> &result, bool hasUltimateDoom, bool hasDoom2 )
 {
